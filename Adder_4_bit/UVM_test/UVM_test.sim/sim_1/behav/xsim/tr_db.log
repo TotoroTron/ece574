@@ -1,0 +1,2 @@
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.adder_4_bit_agent.sequencer STREAM:856}
+  CREATE_STREAM @0 {NAME:seq T:Transactions SCOPE:uvm_test_top.env.adder_4_bit_agent.sequencer STREAM:856}

@@ -1,0 +1,1 @@
+"adder_4_bit_tb_top" -relax -s "top" -timescale "1ns/1ps" 

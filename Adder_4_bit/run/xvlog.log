@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/src/design/half_adder.sv" into library work
+INFO: [VRFC 10-311] analyzing module half_adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/src/design/full_adder.sv" into library work
+INFO: [VRFC 10-311] analyzing module full_adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/src/design/adder_4_bit.sv" into library work
+INFO: [VRFC 10-311] analyzing module adder_4_bit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/env/agents/adder_4_bit_agent/adder_4_bit_agent_pkg.sv" into library work
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'NO_OF_TRANSACTIONS' [../verif/env/agents/adder_4_bit_agent/adder_4_bit_defines.svh:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/env/ref_model/adder_4_bit_ref_model_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/env/top/adder_4_bit_env_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/tests/sequence_lib/src/adder_4_bit_seq_list.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/tests/src/adder_4_bit_test_list.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/tb/src/adder_4_bit_tb_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module adder_4_bit_tb_top

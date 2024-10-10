@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# xsim v2023.2.2 (64-bit)
+# SW Build 4126759 on Thu Feb  8 23:52:05 MST 2024
+# IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+# SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+# Start of session at: Thu Oct 10 15:30:26 2024
+# Process ID: 36344
+# Current directory: /home/bcheng/workspace/dev/ece574/Adder_4_bit/run
+# Command line: xsim -mode tcl -source {xsim.dir/top/xsim_script.tcl}
+# Log file: /home/bcheng/workspace/dev/ece574/Adder_4_bit/run/xsim.log
+# Journal file: /home/bcheng/workspace/dev/ece574/Adder_4_bit/run/xsim.jou
+# Running On: bcheng-HP, OS: Linux, CPU Frequency: 3667.416 MHz, CPU Physical cores: 4, Host memory: 16397 MB
+#-----------------------------------------------------------
+source xsim.dir/top/xsim_script.tcl
+# xsim {top} -autoloadwcfg
+Time resolution is 1 ps
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 10 15:30:33 2024...

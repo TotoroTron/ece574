@@ -1,0 +1,17 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/src/design/adder_4_bit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_4_bit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/env/agents/adder_4_bit_agent/adder_4_bit_agent_pkg.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3381] ignoring re-definition of command line macro 'NO_OF_TRANSACTIONS' [../../../../../verif/env/agents/adder_4_bit_agent/adder_4_bit_defines.svh:6]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/env/ref_model/adder_4_bit_ref_model_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/env/top/adder_4_bit_env_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/tb/src/adder_4_bit_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/tests/sequence_lib/src/adder_4_bit_seq_list.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/tests/src/adder_4_bit_test_list.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/src/design/full_adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module full_adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/src/design/half_adder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module half_adder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/verif/tb/src/adder_4_bit_tb_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_4_bit_tb_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/bcheng/workspace/dev/ece574/Adder_4_bit/UVM_test/UVM_test.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

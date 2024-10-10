@@ -1,0 +1,1 @@
+--debug "typical" --relax --mt "8" -d "NO_OF_TRANSACTIONS=2000" -L "xil_defaultlib" -L "uvm" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "adder_4_bit_tb_top_behav" "xil_defaultlib.adder_4_bit_tb_top" "xil_defaultlib.glbl" -log "elaborate.log" -L "UVM" -timescale "1ns/1ps" 
