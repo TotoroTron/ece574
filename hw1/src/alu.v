@@ -5,8 +5,9 @@ module alu
 (
     input wire [DATA_WIDTH-1:0] A, B,
     input wire [2:0] ALUOp,
-    output reg [DATA_WIDTH-1:0] Q,
-    output reg Cout
+    output reg [DATA_WIDTH-1:0] Q
+    // output reg Cout
+    // carry-out is not part of the specification!
 );
 
 always @(*)

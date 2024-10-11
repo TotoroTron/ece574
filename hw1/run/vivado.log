@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# Vivado v2023.2.2 (64-bit)
+# SW Build 4126759 on Thu Feb  8 23:52:05 MST 2024
+# IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+# SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+# Start of session at: Fri Oct 11 17:41:15 2024
+# Process ID: 51038
+# Current directory: /home/bcheng/workspace/dev/ece574/hw1/run
+# Command line: vivado -mode batch -source simulate.tcl
+# Log file: /home/bcheng/workspace/dev/ece574/hw1/run/vivado.log
+# Journal file: /home/bcheng/workspace/dev/ece574/hw1/run/vivado.jou
+# Running On: bcheng-HP, OS: Linux, CPU Frequency: 3709.048 MHz, CPU Physical cores: 4, Host memory: 16397 MB
+#-----------------------------------------------------------
+source simulate.tcl
+# exec xvlog ../src/alu.v
+# exec xvlog -sv ../verif/tb_alu.sv
+# exec xelab -debug typical -top tb_alu -snapshot my_tb_snap
+# exec xsim my_tb_snap --tclbatch xsim_cfg.tcl
+# exec xsim --gui my_tb_snap.wdb
+
+****** xsim v2023.2.2 (64-bit)
+  **** SW Build 4126759 on Thu Feb  8 23:52:05 MST 2024
+  **** IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+  **** SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+start_gui
+INFO: [Common 17-206] Exiting xsim at Fri Oct 11 17:42:19 2024...
+Picked up _JAVA_OPTIONS: -Xmx32736m
+    while executing
+"exec xsim --gui my_tb_snap.wdb"
+    (file "simulate.tcl" line 18)
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 11 17:42:22 2024...
