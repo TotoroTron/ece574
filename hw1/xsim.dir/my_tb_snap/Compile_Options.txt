@@ -1,0 +1,1 @@
+-debug "typical" -top "tb_alu" -snapshot "my_tb_snap" 
