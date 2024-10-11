@@ -29,6 +29,7 @@ module tb_alu;
         B = 32'd2;
         ALUOp = 3'b010;
         $display("Expected Result: Q = %d", 3);
+        $display("Actual Result: Q = %d", Q);
         #10;
 
 
@@ -36,6 +37,7 @@ module tb_alu;
         B = 32'd4;
         ALUOp = 3'b110;
         $display("Expected Result: Q = %d", -1);
+        $display("Actual Result: Q = %d", Q);
         #10;
 
         // Apply stimulus for 10 clock cycles;
