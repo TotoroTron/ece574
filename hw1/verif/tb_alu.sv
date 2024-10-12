@@ -5,6 +5,8 @@
 module tb_alu;
 
     localparam DATA_WIDTH = 32;
+    int random_seed = 77;
+    int num_errors = 0;
 
     // inputs
     reg [DATA_WIDTH-1:0] A, B;
@@ -56,30 +58,33 @@ module tb_alu;
         $display();
 
         // Apply stimulus for 10 clock cycles;
-        repeat (10) begin
+        repeat (100) begin
             #10; // Wait for rising edge clock 
+            A = $urandom(random_seed);
+            B = $urandom(random_seed);
+            ALUOp = $urandom(random_seed);
 
             $display("A = %h, B = %h, ALUOp = %b", A, B, ALUOp);
             case (ALUOp)
                 3'b000: begin
                     exp = A & B;
                     assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else $error("FAILED! Expected: %h. Actual: %h", Q, exp);
+                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
                 end
                 3'b001: begin
                     exp = A | B;
                     assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else $error("FAILED! Expected: %h. Actual: %h", Q, exp);
+                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
                 end
                 3'b010: begin
                     exp = A + B;
                     assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else $error("FAILED! Expected: %h. Actual: %h", Q, exp);
+                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
                 end
                 3'b110: begin
                     exp = A - B;
                     assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else $error("FAILED! Expected: %h. Actual: %h", Q, exp);
+                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
                 end
                 3'b111: begin
                     if (A < B) begin
@@ -88,21 +93,19 @@ module tb_alu;
                         exp = { (DATA_WIDTH){1'b0} }; // exp = 0
                     end
                     assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else $error("FAILED! Expected: %h. Actual: %h", Q, exp);
+                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
                 end
                 default: begin
                     exp = 0;
                     assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else $error("FAILED! Expected: %h. Actual: %h", Q, exp);
+                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
                 end
             endcase
 
             $display();
 
-            A = A + 1;
-            B = B + 1;
-            ALUOp = ALUOp + 1;
         end // repeat
+        $display("Number of errors: %d", num_errors);
 
         $finish;
     end // initial

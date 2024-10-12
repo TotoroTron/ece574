@@ -1,0 +1,328 @@
+#-----------------------------------------------------------
+# xsim v2023.2.2 (64-bit)
+# SW Build 4126759 on Thu Feb  8 23:52:05 MST 2024
+# IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+# SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+# Start of session at: Sat Oct 12 17:40:44 2024
+# Process ID: 21058
+# Current directory: /home/bcheng/workspace/dev/ece574/hw1/run
+# Command line: xsim -mode tcl -source {xsim.dir/my_tb_snap/xsim_script.tcl}
+# Log file: /home/bcheng/workspace/dev/ece574/hw1/run/xsim.log
+# Journal file: /home/bcheng/workspace/dev/ece574/hw1/run/xsim.jou
+# Running On: bcheng-HP, OS: Linux, CPU Frequency: 2853.194 MHz, CPU Physical cores: 4, Host memory: 16397 MB
+#-----------------------------------------------------------
+source xsim.dir/my_tb_snap/xsim_script.tcl
+# xsim {my_tb_snap} -autoloadwcfg -tclbatch {xsim_cfg.tcl}
+Time resolution is 1 ps
+source xsim_cfg.tcl
+## log_wave -recursive *
+## run all
+A = 00000001, B = 00000002, ALUOp = 010
+SUCCESS! Expected: 00000003. Actual: 00000003
+
+A = 00000003, B = 00000004, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 00000003, B = 00000004, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 00000004, B = 00000005, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 00000005, B = 00000006, ALUOp = 000
+SUCCESS! Expected: 00000004. Actual: 00000004
+
+A = 00000006, B = 00000007, ALUOp = 001
+SUCCESS! Expected: 00000007. Actual: 00000007
+
+A = 00000007, B = 00000008, ALUOp = 010
+SUCCESS! Expected: 0000000f. Actual: 0000000f
+
+A = 00000008, B = 00000009, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000009, B = 0000000a, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000000a, B = 0000000b, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000000b, B = 0000000c, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 0000000c, B = 0000000d, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 0000000d, B = 0000000e, ALUOp = 000
+SUCCESS! Expected: 0000000c. Actual: 0000000c
+
+A = 0000000e, B = 0000000f, ALUOp = 001
+SUCCESS! Expected: 0000000f. Actual: 0000000f
+
+A = 0000000f, B = 00000010, ALUOp = 010
+SUCCESS! Expected: 0000001f. Actual: 0000001f
+
+A = 00000010, B = 00000011, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000011, B = 00000012, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000012, B = 00000013, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000013, B = 00000014, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 00000014, B = 00000015, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 00000015, B = 00000016, ALUOp = 000
+SUCCESS! Expected: 00000014. Actual: 00000014
+
+A = 00000016, B = 00000017, ALUOp = 001
+SUCCESS! Expected: 00000017. Actual: 00000017
+
+A = 00000017, B = 00000018, ALUOp = 010
+SUCCESS! Expected: 0000002f. Actual: 0000002f
+
+A = 00000018, B = 00000019, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000019, B = 0000001a, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000001a, B = 0000001b, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000001b, B = 0000001c, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 0000001c, B = 0000001d, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 0000001d, B = 0000001e, ALUOp = 000
+SUCCESS! Expected: 0000001c. Actual: 0000001c
+
+A = 0000001e, B = 0000001f, ALUOp = 001
+SUCCESS! Expected: 0000001f. Actual: 0000001f
+
+A = 0000001f, B = 00000020, ALUOp = 010
+SUCCESS! Expected: 0000003f. Actual: 0000003f
+
+A = 00000020, B = 00000021, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000021, B = 00000022, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000022, B = 00000023, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000023, B = 00000024, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 00000024, B = 00000025, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 00000025, B = 00000026, ALUOp = 000
+SUCCESS! Expected: 00000024. Actual: 00000024
+
+A = 00000026, B = 00000027, ALUOp = 001
+SUCCESS! Expected: 00000027. Actual: 00000027
+
+A = 00000027, B = 00000028, ALUOp = 010
+SUCCESS! Expected: 0000004f. Actual: 0000004f
+
+A = 00000028, B = 00000029, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000029, B = 0000002a, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000002a, B = 0000002b, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000002b, B = 0000002c, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 0000002c, B = 0000002d, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 0000002d, B = 0000002e, ALUOp = 000
+SUCCESS! Expected: 0000002c. Actual: 0000002c
+
+A = 0000002e, B = 0000002f, ALUOp = 001
+SUCCESS! Expected: 0000002f. Actual: 0000002f
+
+A = 0000002f, B = 00000030, ALUOp = 010
+SUCCESS! Expected: 0000005f. Actual: 0000005f
+
+A = 00000030, B = 00000031, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000031, B = 00000032, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000032, B = 00000033, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000033, B = 00000034, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 00000034, B = 00000035, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 00000035, B = 00000036, ALUOp = 000
+SUCCESS! Expected: 00000034. Actual: 00000034
+
+A = 00000036, B = 00000037, ALUOp = 001
+SUCCESS! Expected: 00000037. Actual: 00000037
+
+A = 00000037, B = 00000038, ALUOp = 010
+SUCCESS! Expected: 0000006f. Actual: 0000006f
+
+A = 00000038, B = 00000039, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000039, B = 0000003a, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000003a, B = 0000003b, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000003b, B = 0000003c, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 0000003c, B = 0000003d, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 0000003d, B = 0000003e, ALUOp = 000
+SUCCESS! Expected: 0000003c. Actual: 0000003c
+
+A = 0000003e, B = 0000003f, ALUOp = 001
+SUCCESS! Expected: 0000003f. Actual: 0000003f
+
+A = 0000003f, B = 00000040, ALUOp = 010
+SUCCESS! Expected: 0000007f. Actual: 0000007f
+
+A = 00000040, B = 00000041, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000041, B = 00000042, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000042, B = 00000043, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000043, B = 00000044, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 00000044, B = 00000045, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 00000045, B = 00000046, ALUOp = 000
+SUCCESS! Expected: 00000044. Actual: 00000044
+
+A = 00000046, B = 00000047, ALUOp = 001
+SUCCESS! Expected: 00000047. Actual: 00000047
+
+A = 00000047, B = 00000048, ALUOp = 010
+SUCCESS! Expected: 0000008f. Actual: 0000008f
+
+A = 00000048, B = 00000049, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000049, B = 0000004a, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000004a, B = 0000004b, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000004b, B = 0000004c, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 0000004c, B = 0000004d, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 0000004d, B = 0000004e, ALUOp = 000
+SUCCESS! Expected: 0000004c. Actual: 0000004c
+
+A = 0000004e, B = 0000004f, ALUOp = 001
+SUCCESS! Expected: 0000004f. Actual: 0000004f
+
+A = 0000004f, B = 00000050, ALUOp = 010
+SUCCESS! Expected: 0000009f. Actual: 0000009f
+
+A = 00000050, B = 00000051, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000051, B = 00000052, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000052, B = 00000053, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000053, B = 00000054, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 00000054, B = 00000055, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 00000055, B = 00000056, ALUOp = 000
+SUCCESS! Expected: 00000054. Actual: 00000054
+
+A = 00000056, B = 00000057, ALUOp = 001
+SUCCESS! Expected: 00000057. Actual: 00000057
+
+A = 00000057, B = 00000058, ALUOp = 010
+SUCCESS! Expected: 000000af. Actual: 000000af
+
+A = 00000058, B = 00000059, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000059, B = 0000005a, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000005a, B = 0000005b, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 0000005b, B = 0000005c, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 0000005c, B = 0000005d, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 0000005d, B = 0000005e, ALUOp = 000
+SUCCESS! Expected: 0000005c. Actual: 0000005c
+
+A = 0000005e, B = 0000005f, ALUOp = 001
+SUCCESS! Expected: 0000005f. Actual: 0000005f
+
+A = 0000005f, B = 00000060, ALUOp = 010
+SUCCESS! Expected: 000000bf. Actual: 000000bf
+
+A = 00000060, B = 00000061, ALUOp = 011
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000061, B = 00000062, ALUOp = 100
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000062, B = 00000063, ALUOp = 101
+SUCCESS! Expected: 00000000. Actual: 00000000
+
+A = 00000063, B = 00000064, ALUOp = 110
+SUCCESS! Expected: ffffffff. Actual: ffffffff
+
+A = 00000064, B = 00000065, ALUOp = 111
+SUCCESS! Expected: 00000001. Actual: 00000001
+
+A = 00000065, B = 00000066, ALUOp = 000
+SUCCESS! Expected: 00000064. Actual: 00000064
+
+A = 00000066, B = 00000067, ALUOp = 001
+SUCCESS! Expected: 00000067. Actual: 00000067
+
+$finish called at time : 1020 ns : File "/home/bcheng/workspace/dev/ece574/hw1/verif/tb_alu.sv" Line 107
+## exit
+INFO: [Common 17-206] Exiting xsim at Sat Oct 12 17:40:46 2024...
