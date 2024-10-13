@@ -5,7 +5,6 @@
 module tb_alu;
 
     localparam DATA_WIDTH = 32;
-    int random_seed = 77;
     int num_errors = 0;
 
     // inputs
@@ -59,10 +58,11 @@ module tb_alu;
 
         // Apply stimulus for 10 clock cycles;
         repeat (100) begin
+            A = $urandom();
+            B = $urandom();
+            ALUOp = $urandom();
+
             #10; // Wait for rising edge clock 
-            A = $urandom(random_seed);
-            B = $urandom(random_seed);
-            ALUOp = $urandom(random_seed);
 
             $display("A = %h, B = %h, ALUOp = %b", A, B, ALUOp);
             case (ALUOp)
@@ -105,7 +105,10 @@ module tb_alu;
             $display();
 
         end // repeat
-        $display("Number of errors: %d", num_errors);
+
+        $display();
+        $display("Total number of errors: %d", num_errors);
+        $display();
 
         $finish;
     end // initial

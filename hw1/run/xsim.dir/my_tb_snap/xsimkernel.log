@@ -1,4 +1,4 @@
-Running: xsim.dir/my_tb_snap/xsimk -simmode gui -wdb my_tb_snap.wdb -simrunnum 0 -socket 36829
+Running: xsim.dir/my_tb_snap/xsimk -simmode gui -wdb my_tb_snap.wdb -simrunnum 0 -socket 37203
 Design successfully loaded
 Design Loading Memory Usage: 21816 KB (Peak: 22420 KB)
 Design Loading CPU Usage: 0 ms
