@@ -1,0 +1,332 @@
+#-----------------------------------------------------------
+# xsim v2023.2.2 (64-bit)
+# SW Build 4126759 on Thu Feb  8 23:52:05 MST 2024
+# IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+# SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+# Start of session at: Sun Oct 13 13:57:43 2024
+# Process ID: 11822
+# Current directory: /home/bcheng/workspace/dev/ece574/hw1/run
+# Command line: xsim -mode tcl -source {xsim.dir/my_tb_snap/xsim_script.tcl}
+# Log file: /home/bcheng/workspace/dev/ece574/hw1/run/xsim.log
+# Journal file: /home/bcheng/workspace/dev/ece574/hw1/run/xsim.jou
+# Running On: bcheng-HP, OS: Linux, CPU Frequency: 1557.529 MHz, CPU Physical cores: 4, Host memory: 16397 MB
+#-----------------------------------------------------------
+source xsim.dir/my_tb_snap/xsim_script.tcl
+# xsim {my_tb_snap} -autoloadwcfg -tclbatch {xsim_cfg.tcl}
+Time resolution is 1 ps
+source xsim_cfg.tcl
+## log_wave -recursive *
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## run all
+A = 00000001, B = 00000002, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: 00000003, Actual: 00000003
+
+A = 00000003, B = 00000004, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: ffffffff, Actual: ffffffff
+
+A = 64c931db, B = 6fa124bc, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 468cca8e, B = 6b3cf4f0, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 169bff1e, B = 500626cb, ALUOp = 001
+SUCCESS! Operation: OR, Expected: 569fffdf, Actual: 569fffdf
+
+A = 6bdaf01b, B = 1692f159, ALUOp = 001
+SUCCESS! Operation: OR, Expected: 7fdaf15b, Actual: 7fdaf15b
+
+A = 44dc8ef8, B = ad2ef078, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 8d7f5292, B = 9909e093, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: f47571ff, Actual: f47571ff
+
+A = 415f0b1b, B = 5de66f8b, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: e3789b90, Actual: e3789b90
+
+A = 4544ea70, B = 6b65c21d, ALUOp = 001
+SUCCESS! Operation: OR, Expected: 6f65ea7d, Actual: 6f65ea7d
+
+A = 5fbdbb1e, B = acc4cd39, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = a7657c44, B = 7209b7a9, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: 196f33ed, Actual: 196f33ed
+
+A = 88171dfd, B = 51c772c7, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 46af2f41, B = 792cef0b, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 70ad02a3, B = 81440d08, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 476fa33e, B = 47f33c49, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: ff7c66f5, Actual: ff7c66f5
+
+A = 103bfb82, B = b8a03eed, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: 579bbc95, Actual: 579bbc95
+
+A = 2acfc68d, B = 000fe22b, ALUOp = 111
+SUCCESS! Operation: SLT, Expected: 00000000, Actual: 00000000
+
+A = 3e9080a3, B = 904bddae, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 539547c1, B = 3b1ba43b, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 13110401, Actual: 13110401
+
+A = b08d4b29, B = 79ac24df, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: 36e1264a, Actual: 36e1264a
+
+A = 46258d7d, B = 4d416ca0, ALUOp = 001
+SUCCESS! Operation: OR, Expected: 4f65edfd, Actual: 4f65edfd
+
+A = 5bcdb1fd, B = 7dceb7c9, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 59ccb1c9, Actual: 59ccb1c9
+
+A = 01c1b42b, B = 43f44547, ALUOp = 001
+SUCCESS! Operation: OR, Expected: 43f5f56f, Actual: 43f5f56f
+
+A = 62d15a95, B = 1fc1f744, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: 829351d9, Actual: 829351d9
+
+A = 3d8d25dd, B = a183ab70, ALUOp = 001
+SUCCESS! Operation: OR, Expected: bd8faffd, Actual: bd8faffd
+
+A = 658a5dc6, B = 84550605, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: e13557c1, Actual: e13557c1
+
+A = 8b564d79, B = 41e22be2, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: 49742197, Actual: 49742197
+
+A = 75168272, B = a76c89a9, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 7e98aeb0, B = b2c2d722, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 299e865e, B = 27d95994, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: 01c52cca, Actual: 01c52cca
+
+A = 58f96411, B = a6720845, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 00700001, Actual: 00700001
+
+A = 4a366da7, B = 50108ea3, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 62e000e5, B = a909f2b5, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: 0be9f39a, Actual: 0be9f39a
+
+A = ae4c6b46, B = 7340605c, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = a1922f3b, B = 56206141, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: f7b2907c, Actual: f7b2907c
+
+A = bb49fb75, B = 046ccc87, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: b6dd2eee, Actual: b6dd2eee
+
+A = 25125652, B = 25fefbc2, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 25125242, Actual: 25125242
+
+A = b7e4a3e5, B = 6148f737, ALUOp = 111
+SUCCESS! Operation: SLT, Expected: 00000000, Actual: 00000000
+
+A = 3df751d3, B = 865b4d8a, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: c4529f5d, Actual: c4529f5d
+
+A = 1a2a6103, B = be3ff16f, ALUOp = 001
+SUCCESS! Operation: OR, Expected: be3ff16f, Actual: be3ff16f
+
+A = 7aca3cbb, B = 7c374342, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 81691435, B = 9661a446, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: 17cab87b, Actual: 17cab87b
+
+A = 6950e2e6, B = 912be101, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 5793ff22, B = 9294f536, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 04170ccc, B = 7be5d81c, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 2cd15db9, B = 5379d73e, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: 804b34f7, Actual: 804b34f7
+
+A = 6bed52ec, B = 5790e40b, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: 145c6ee1, Actual: 145c6ee1
+
+A = 3c352920, B = 046241c4, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 1f11f48a, B = 704f94b1, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 10019480, Actual: 10019480
+
+A = 7dd49811, B = 2c84bdd1, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = b01112d6, B = 4b96b25c, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = b9de71a6, B = 496b4a6d, ALUOp = 111
+SUCCESS! Operation: SLT, Expected: 00000000, Actual: 00000000
+
+A = 480e123a, B = 797c5d43, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 468d4780, B = b35acee9, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 02084680, Actual: 02084680
+
+A = 71913a97, B = 7b68e123, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 682be00a, B = 41f628a3, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = a831cfea, B = 3387633a, ALUOp = 111
+SUCCESS! Operation: SLT, Expected: 00000000, Actual: 00000000
+
+A = 61b41d0d, B = 1bb34344, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 4e913919, B = 43e5132e, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 36d73648, B = 2599303b, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: 5c706683, Actual: 5c706683
+
+A = 61135c1b, B = 742a6954, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 60024810, Actual: 60024810
+
+A = bed6e529, B = ab019f9d, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = b84db17b, B = 0c14fbb8, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 0804b138, Actual: 0804b138
+
+A = 75a990fb, B = 4aebe0e1, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 589ea0b7, B = 0339925c, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: 55650e5b, Actual: 55650e5b
+
+A = afbe19c8, B = 78e32358, ALUOp = 111
+SUCCESS! Operation: SLT, Expected: 00000000, Actual: 00000000
+
+A = 31df3275, B = 5181c40f, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 401546db, B = 013fddd7, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 99373c23, B = b31f104d, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 7592c3c7, B = 73345728, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 4ad16ec3, B = 0c6b934b, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 08410243, Actual: 08410243
+
+A = 7191ddce, B = 01fe5712, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 01905502, Actual: 01905502
+
+A = 19922ab1, B = 4ccfc5d5, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 74b187e1, B = be61a3a4, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: b64fe43d, Actual: b64fe43d
+
+A = 43053c3a, B = 57f3ce55, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 9dc483de, B = 4ca55637, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 0c840216, Actual: 0c840216
+
+A = 7a822294, B = 8faa9271, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 240f8720, B = ad6f164f, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 0bfe8f50, B = 27f138e3, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 4be165d6, B = 4c00c004, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 58699292, B = 57ff4f54, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 50690210, Actual: 50690210
+
+A = 749c51c0, B = 23e0b52a, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 3e3e273c, B = 7c4a47bd, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 3c0a073c, Actual: 3c0a073c
+
+A = 2fd1359c, B = 70e6997d, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 6d650400, B = 2f24c0b9, ALUOp = 000
+SUCCESS! Operation: AND, Expected: 2d240000, Actual: 2d240000
+
+A = 82f821b9, B = 5ef5f656, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = bc6bf49c, B = 4c5afa56, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: 7010fa46, Actual: 7010fa46
+
+A = 722a0f3c, B = 4f531c0f, ALUOp = 100
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 98cec359, B = 0bbf10ab, ALUOp = 011
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 6e98382f, B = 7de91fe7, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: ec815816, Actual: ec815816
+
+A = a357a35c, B = 16b7e340, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: 8c9fc01c, Actual: 8c9fc01c
+
+A = a47208df, B = 85501b70, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 74df8a71, B = a8a7becc, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: cc37cba5, Actual: cc37cba5
+
+A = 510c1caf, B = 4d19c7ab, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: 03f25504, Actual: 03f25504
+
+A = ab21ced5, B = 41f9521c, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: ed1b20f1, Actual: ed1b20f1
+
+A = 9bef643b, B = 93056ecc, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 920d1511, B = be273da1, ALUOp = 001
+SUCCESS! Operation: OR, Expected: be2f3db1, Actual: be2f3db1
+
+A = b0d284b3, B = 5a16a1dc, ALUOp = 101
+SUCCESS! Operation: DEFAULT, Expected: 00000000, Actual: 00000000
+
+A = 9cb1bc00, B = 6c23b6ed, ALUOp = 110
+SUCCESS! Operation: SUB, Expected: 308e0513, Actual: 308e0513
+
+A = 4a8a4569, B = 9cf63ba0, ALUOp = 010
+SUCCESS! Operation: ADD, Expected: e7808109, Actual: e7808109
+
+A = 8b683d9f, B = b9a7f7a0, ALUOp = 111
+SUCCESS! Operation: SLT, Expected: 00000001, Actual: 00000001
+
+
+Total number of errors:           0
+
+$finish called at time : 1020 ns : File "/home/bcheng/workspace/dev/ece574/hw1/verif/tb_alu.sv" Line 116
+## exit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 13 13:57:46 2024...

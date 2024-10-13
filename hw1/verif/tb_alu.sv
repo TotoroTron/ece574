@@ -28,6 +28,17 @@ module tb_alu;
     reg clk;
     always #5 clk = ~clk;
 
+    task assert_and_report(input [DATA_WIDTH-1:0] expected, input [DATA_WIDTH-1:0] actual, input string operation);
+        begin
+            if (actual == expected) begin
+                $display("SUCCESS! Operation: %s, Expected: %h, Actual: %h", operation, expected, actual);
+            end else begin
+                $error("FAILED! Operation: %s, Expected: %h, Actual: %h", operation, expected, actual);
+                num_errors = num_errors + 1;
+            end
+        end
+    endtask
+
     initial begin
         $dumpfile("waveform.vcd");
         $dumpvars;
@@ -41,8 +52,7 @@ module tb_alu;
         ALUOp = 3'b010;
         #10;
         $display("A = %h, B = %h, ALUOp = %b", A, B, ALUOp);
-        assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-        else $error("FAILED! Expected: %h. Actual: %h", Q, exp);
+        assert_and_report(exp, Q, "ADD");
         $display();
 
 
@@ -52,8 +62,7 @@ module tb_alu;
         ALUOp = 3'b110;
         #10;
         $display("A = %h, B = %h, ALUOp = %b", A, B, ALUOp);
-        assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-        else $error("FAILED! Expected: %h. Actual: %h", Q, exp);
+        assert_and_report(exp, Q, "SUB");
         $display();
 
         // Apply stimulus for 10 clock cycles;
@@ -68,23 +77,19 @@ module tb_alu;
             case (ALUOp)
                 3'b000: begin
                     exp = A & B;
-                    assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
+                    assert_and_report(exp, Q, "AND");
                 end
                 3'b001: begin
                     exp = A | B;
-                    assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
+                    assert_and_report(exp, Q, "OR");
                 end
                 3'b010: begin
                     exp = A + B;
-                    assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
+                    assert_and_report(exp, Q, "ADD");
                 end
                 3'b110: begin
                     exp = A - B;
-                    assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
+                    assert_and_report(exp, Q, "SUB");
                 end
                 3'b111: begin
                     if (A < B) begin
@@ -92,13 +97,11 @@ module tb_alu;
                     end else begin
                         exp = { (DATA_WIDTH){1'b0} }; // exp = 0
                     end
-                    assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
+                    assert_and_report(exp, Q, "SLT");
                 end
                 default: begin
                     exp = 0;
-                    assert(Q == exp) $display("SUCCESS! Expected: %h. Actual: %h", Q, exp);
-                    else begin $error("FAILED! Expected: %h. Actual: %h", Q, exp); num_errors = num_errors + 1; end
+                    assert_and_report(exp, Q, "DEFAULT");
                 end
             endcase
 
