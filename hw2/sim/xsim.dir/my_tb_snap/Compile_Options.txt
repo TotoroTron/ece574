@@ -1,0 +1,1 @@
+-debug "typical" -top "tb_mult3detect" -snapshot "my_tb_snap" 

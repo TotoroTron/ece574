@@ -31,9 +31,9 @@ module tb_alu;
     task assert_and_report(input [DATA_WIDTH-1:0] expected, input [DATA_WIDTH-1:0] actual, input string operation);
         begin
             if (actual == expected) begin
-                $display("SUCCESS! Operation: %s, Expected: %h, Actual: %h", operation, expected, actual);
+                $display("\tSUCCESS! Operation: %s, Expected: %h, Actual: %h", operation, expected, actual);
             end else begin
-                $error("FAILED! Operation: %s, Expected: %h, Actual: %h", operation, expected, actual);
+                $error("\tFAILED! Operation: %s, Expected: %h, Actual: %h", operation, expected, actual);
                 num_errors = num_errors + 1;
             end
         end
