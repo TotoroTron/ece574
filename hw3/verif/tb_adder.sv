@@ -8,8 +8,11 @@ module tb_adder;
     reg [DATA_WIDTH-1:0] tb_a;
     reg [DATA_WIDTH-1:0] tb_b;
     reg tb_cin;
-    wire [DATA_WIDTH-1:0] tb_sum;
-    wire tb_cout;
+
+    wire [DATA_WIDTH-1:0] cla_sum;
+    wire cla_cout;
+    wire [DATA_WIDTH-1:0] rca_sum;
+    wire rca_cout;
 
     int num_errors = 0;
     logic tb_err;
@@ -26,18 +29,32 @@ module tb_adder;
         .iv_a(tb_a),
         .iv_b(tb_b),
         .i_cin(tb_cin),
-        .ov_sum(tb_sum),
-        .o_cout(tb_cout)
+        .ov_sum(cla_sum),
+        .o_cout(cla_cout)
+    );
+
+    ripple_carry_adder_sync
+    #(
+        .DATA_WIDTH(DATA_WIDTH)
+    ) rcas (
+        .i_clk(tb_clk),
+        .i_rst(tb_rst),
+        .i_en(tb_en),
+        .iv_a(tb_a),
+        .iv_b(tb_b),
+        .i_cin(tb_cin),
+        .ov_sum(rca_sum),
+        .o_cout(rca_cout)
     );
 
 
     task assert_and_report(input [DATA_WIDTH-1:0] expected, input [DATA_WIDTH-1:0] actual);
     begin
         if (actual == expected) begin
-            $display("SUCCESS!\n Expected: %b\n Actual:   %b", expected, actual);
+            $display(" SUCCESS!\n  Expected: %b\n  Actual:   %b", expected, actual);
             tb_err = 1'b0;
         end else begin
-            $display("FAILURE!\n Expected: %b\n Actual:   %b", expected, actual);
+            $display(" FAILURE!\n  Expected: %b\n  Actual:   %b", expected, actual);
             num_errors = num_errors + 1;
             tb_err = 1'bx;
         end
@@ -45,11 +62,10 @@ module tb_adder;
     endtask // assert_and_report
 
 
-    task test_add();
+    task test_add(input [DATA_WIDTH-1:0] sum, input cout);
     begin
-        $display("A: %h, B: %h, CIN: %h", tb_a, tb_b, tb_cin);
         {tb_exp_cout, tb_exp_sum} = {1'b0, tb_a} + {1'b0, tb_b} + { {(DATA_WIDTH){1'b0}}, tb_cin };
-        assert_and_report( {tb_exp_cout, tb_exp_sum}, {tb_cout, tb_sum} );
+        assert_and_report( {tb_exp_cout, tb_exp_sum}, {cout, sum} );
     end
     endtask
 
@@ -67,6 +83,7 @@ module tb_adder;
         @(posedge tb_clk);
         tb_rst = 0;
         tb_en = 1;
+        @(posedge tb_clk);
 
         repeat (100) begin
             tb_a = $urandom();
@@ -74,7 +91,12 @@ module tb_adder;
             tb_cin = $urandom();
             @(posedge tb_clk);
             @(posedge tb_clk);
-            test_add();
+
+            $display("A: %h, B: %h, CIN: %h", tb_a, tb_b, tb_cin);
+            $display("CLA: ");
+            test_add(cla_sum, cla_cout);
+            $display("RCA: ");
+            test_add(rca_sum, rca_cout);
             $display();
         end
 

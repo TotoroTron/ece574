@@ -11,5 +11,9 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ns
 Compiling module work.carry_lookahead_adder_default
 Compiling module work.carry_lookahead_adder_sync
+Compiling module work.half_adder
+Compiling module work.full_adder
+Compiling module work.ripple_carry_adder_default
+Compiling module work.ripple_carry_adder_sync
 Compiling module work.tb_adder
 Built simulation snapshot my_tb_snap

@@ -42,6 +42,6 @@ module carry_lookahead_adder
     end endgenerate
 
     // assign final carry
-    assign cout = c[DATA_WIDTH];
+    assign o_cout = c[DATA_WIDTH];
 
 endmodule

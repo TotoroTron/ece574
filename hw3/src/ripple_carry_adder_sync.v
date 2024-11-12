@@ -1,4 +1,4 @@
-module carry_lookahead_adder_sync
+module ripple_carry_adder_sync
 #(
     parameter DATA_WIDTH = 16
 )(
@@ -12,8 +12,8 @@ module carry_lookahead_adder_sync
     output reg o_cout
 );
 
-    wire [DATA_WIDTH-1:0] comb_sum;
-    wire comb_cout;
+wire [DATA_WIDTH-1:0] comb_sum;
+wire comb_cout;
 
     always @(posedge i_clk) begin
         ov_sum <= ov_sum;
@@ -27,10 +27,10 @@ module carry_lookahead_adder_sync
         end
     end
 
-    carry_lookahead_adder
+    ripple_carry_adder
     #(
         .DATA_WIDTH(DATA_WIDTH)
-    ) cla (
+    ) rca (
         .iv_a(iv_a),
         .iv_b(iv_b),
         .i_cin(i_cin),

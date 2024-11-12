@@ -15,7 +15,7 @@ module full_adder
     half_adder ab
     (
         .i_a(i_a),
-        .i_a(i_b),
+        .i_b(i_b),
         .o_sum(sum_ab),
         .o_cout(cout_ab)
     );
@@ -28,7 +28,7 @@ module full_adder
         .o_cout(cout_ab_cin)
     );
 
-    assign o_sum = cout_ab_cin;
-    assign o_cout = cout_ab ^ cout_ab_cin;
+    assign o_sum = sum_ab_cin;
+    assign o_cout = cout_ab | cout_ab_cin;
 
 endmodule
