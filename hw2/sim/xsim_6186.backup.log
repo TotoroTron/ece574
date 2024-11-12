@@ -3,13 +3,13 @@
 # SW Build 4126759 on Thu Feb  8 23:52:05 MST 2024
 # IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
 # SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
-# Start of session at: Thu Oct 17 18:55:58 2024
-# Process ID: 118987
+# Start of session at: Sat Oct 19 14:26:04 2024
+# Process ID: 6186
 # Current directory: /home/bcheng/workspace/dev/ece574/hw2/sim
 # Command line: xsim -mode tcl -source {xsim.dir/my_tb_snap/xsim_script.tcl}
 # Log file: /home/bcheng/workspace/dev/ece574/hw2/sim/xsim.log
 # Journal file: /home/bcheng/workspace/dev/ece574/hw2/sim/xsim.jou
-# Running On: bcheng-HP, OS: Linux, CPU Frequency: 4324.119 MHz, CPU Physical cores: 4, Host memory: 16397 MB
+# Running On: bcheng-HP, OS: Linux, CPU Frequency: 4164.409 MHz, CPU Physical cores: 4, Host memory: 16397 MB
 #-----------------------------------------------------------
 source xsim.dir/my_tb_snap/xsim_script.tcl
 # xsim {my_tb_snap} -autoloadwcfg -tclbatch {xsim_cfg.tcl}
@@ -421,6 +421,6 @@ SUCCESS! Expected: 1, Actual: 1
 
 Total number of errors:           0
 
-$finish called at time : 36010 ns : File "/home/bcheng/workspace/dev/ece574/hw2/verif/tb_mult3detect.sv" Line 92
+$finish called at time : 36020 ns : File "/home/bcheng/workspace/dev/ece574/hw2/verif/tb_mult3detect.sv" Line 93
 ## exit
-INFO: [Common 17-206] Exiting xsim at Thu Oct 17 18:56:00 2024...
+INFO: [Common 17-206] Exiting xsim at Sat Oct 19 14:26:07 2024...
