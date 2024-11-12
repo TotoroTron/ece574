@@ -1,0 +1,10 @@
+0.7
+2020.2
+Feb  8 2024
+23:58:30
+/home/bcheng/workspace/dev/ece574/hw3/src/carry_lookahead_adder.v,1731444689,verilog,,,,carry_lookahead_adder,,,,,,,,
+/home/bcheng/workspace/dev/ece574/hw3/src/carry_lookahead_adder_sync.v,1731445384,verilog,,,,carry_lookahead_adder_sync,,,,,,,,
+/home/bcheng/workspace/dev/ece574/hw3/src/full_adder.v,1731368582,verilog,,,,full_adder,,,,,,,,
+/home/bcheng/workspace/dev/ece574/hw3/src/half_adder.v,1731368566,verilog,,,,half_adder,,,,,,,,
+/home/bcheng/workspace/dev/ece574/hw3/src/ripple_carry_adder.v,1731443360,verilog,,,,,,,,,,,,
+/home/bcheng/workspace/dev/ece574/hw3/verif/tb_adder.sv,1731445715,systemVerilog,,,,tb_adder,,,,,,,,

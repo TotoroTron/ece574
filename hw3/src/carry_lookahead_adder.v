@@ -8,6 +8,15 @@ module carry_lookahead_adder
     output wire [DATA_WIDTH-1:0] ov_sum,
     output wire o_cout
 );
+    //
+    // c0 = c0
+    // c1 = g0 | p0.c0
+    // c2 = g1 | p1.g0 | p1.p0.c0
+    // c3 = g2 | p2.g1 | p2.p1.g0 | p2.p1.p0.c0
+    // c4 = g3 | p3.g2 | p3.p2.g1 | p3.p2.p1.g0 | p3.p2.p1.p0.c0
+    // c5 = g4 | p4.g3 | p4.p3.g2 | p4.p3.p2.g1 | p4.p3.p2.p1.g1 | p5.p4.p3.p2.p1.p0.c0
+    // etc..
+    //
 
     wire [DATA_WIDTH-1:0] p, g;
     wire [DATA_WIDTH:0] c;
@@ -29,10 +38,10 @@ module carry_lookahead_adder
 
     // compute sum
     generate for (i = 0; i < DATA_WIDTH; i = i + 1) begin
-        assign sum[i] = p[i] ^ c[i];
+        assign ov_sum[i] = p[i] ^ c[i];
     end endgenerate
 
     // assign final carry
-    assign cout = c[n];
+    assign cout = c[DATA_WIDTH];
 
 endmodule

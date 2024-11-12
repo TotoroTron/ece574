@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DESIGN=hw3
-TESTBENCH=top_level
+TESTBENCH=adder
 
 check_status() {
     if [ $? -ne 0 ]; then
@@ -9,6 +9,13 @@ check_status() {
         exit 1
     fi
 }
+
+root_dir="/home/bcheng/workspace/dev/ece574"
+sim_dir="$root_dir/$DESIGN/sim"
+src_dir="$root_dir/$DESIGN/src"
+verif_dir="$root_dir/$DESIGN/verif"
+
+cd $sim_dir
 
 # xsim config tcl
 cat <<EOL >xsim_cfg.tcl
@@ -21,21 +28,6 @@ EOL
 cat <<EOL >waveform.tcl
 create_wave_config; add_wave /; set_property needs_save false [current_wave_config]
 EOL
-
-root_dir="/home/bcheng/workspace/dev/ece574"
-sim_dir="$root_dir/$DESIGN/sim"
-src_dir="$root_dir/$DESIGN/src"
-verif_dir="$root_dir/$DESIGN/verif"
-
-# generate sine.mem
-cd $verif_dir
-python3 sine.py
-
-# generate weights.mem
-cd $src_dir
-python3 weights.py
-
-cd $sim_dir
 
 # Read source files and log
 src_files=("$src_dir"/*.v)
