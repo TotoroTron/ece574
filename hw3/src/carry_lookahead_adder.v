@@ -1,4 +1,4 @@
-module carry_look_ahead_adder
+module carry_lookahead_adder
 #(
     parameter DATA_WIDTH = 16
 )(
