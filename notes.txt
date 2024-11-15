@@ -1,0 +1,6 @@
+RRAM
+PCM (phase change memory)
+MRAM
+FeRAM
+ECC memory
+RS Code (Reed Solomon Coding)
