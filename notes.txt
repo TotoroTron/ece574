@@ -4,3 +4,15 @@ MRAM
 FeRAM
 ECC memory
 RS Code (Reed Solomon Coding)
+
+
+https://ieeexplore.ieee.org/document/7738524
+https://ieeexplore.ieee.org/abstract/document/7284058
+
+design space exploration
+    1) mapping space
+        weight stationary, input stationary, etc
+    2) hardware configuration space
+        given workload, use 4x4, 8x8, etc PE? DRAM bandwidth?
+
+

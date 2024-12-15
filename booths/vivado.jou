@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2023.2.2 (64-bit)
+# SW Build 4126759 on Thu Feb  8 23:52:05 MST 2024
+# IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
+# SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
+# Start of session at: Mon Dec  9 18:37:52 2024
+# Process ID: 9219
+# Current directory: /home/bcheng/workspace/dev/ece574/booths
+# Command line: vivado
+# Log file: /home/bcheng/workspace/dev/ece574/booths/vivado.log
+# Journal file: /home/bcheng/workspace/dev/ece574/booths/vivado.jou
+# Running On: bcheng-HP, OS: Linux, CPU Frequency: 3634.024 MHz, CPU Physical cores: 4, Host memory: 16397 MB
+#-----------------------------------------------------------
+start_gui
+create_project booths . -part xc7z020clg400-1
+set_property board_part digilentinc.com:arty-z7-20:part0:1.1 [current_project]
+file mkdir /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new
+close [ open /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new/carry_lookahead_adder.v w ]
+add_files /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new/carry_lookahead_adder.v
+close [ open /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new/half_adder.v w ]
+add_files /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new/half_adder.v
+close [ open /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new/carry_lookahead_adder_sync.v w ]
+add_files /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new/carry_lookahead_adder_sync.v
+close [ open /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new/full_adder.v w ]
+add_files /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new/full_adder.v
+close [ open /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new/top_level.v w ]
+add_files /home/bcheng/workspace/dev/ece574/booths/booths.srcs/sources_1/new/top_level.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top carry_lookahead_adder_sync [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
