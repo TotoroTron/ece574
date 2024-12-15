@@ -4,6 +4,6 @@ Feb  8 2024
 23:58:30
 /home/bcheng/workspace/dev/ece574/hw4/src/mac.v,1734222487,verilog,,,,mac,,,,,,,,
 /home/bcheng/workspace/dev/ece574/hw4/src/memory_modelling.v,1734219204,verilog,,,,memory_modelling,,,,,,,,
-/home/bcheng/workspace/dev/ece574/hw4/src/single_port_ram.v,1734221112,verilog,,,,single_port_ram,,,,,,,,
+/home/bcheng/workspace/dev/ece574/hw4/src/single_port_ram.v,1734297536,verilog,,,,single_port_ram,,,,,,,,
 /home/bcheng/workspace/dev/ece574/hw4/src/top_level.v,1734219708,verilog,,,,top_level,,,,,,,,
-/home/bcheng/workspace/dev/ece574/hw4/verif/tb_memory_modelling.sv,1734222560,systemVerilog,,,,tb_memory_modelling,,,,,,,,
+/home/bcheng/workspace/dev/ece574/hw4/verif/tb_memory_modelling.sv,1734297592,systemVerilog,,,,tb_memory_modelling,,,,,,,,

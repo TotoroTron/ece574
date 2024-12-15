@@ -6,7 +6,7 @@ module tb_memory_modelling;
     reg tb_clk;
     reg tb_rst;
     reg tb_en;
-    reg [DATA_WIDTH-1:0] tb_a [RAM_DEPTH-1:0];
+    reg [DATA_WIDTH-1:0] tb_a [0:RAM_DEPTH-1];
     reg [DATA_WIDTH-1:0] tb_b;
 
     wire [DATA_WIDTH-1:0] dut_sum;
@@ -50,14 +50,14 @@ module tb_memory_modelling;
         $dumpfile("waveform.vcd");
         $dumpvars;
 
-        tb_a[0] = 16'h00A0;
-        tb_a[1] = 16'h00B1;
-        tb_a[2] = 16'h00C2;
-        tb_a[3] = 16'h00D3;
-        tb_a[4] = 16'h00E4;
-        tb_a[5] = 16'h00F5;
-        tb_a[6] = 16'h0006;
-        tb_a[7] = 16'h0017;
+        tb_a[0] = 16'd111;
+        tb_a[1] = 16'd222;
+        tb_a[2] = 16'd333;
+        tb_a[3] = 16'd25;
+        tb_a[4] = 16'd26;
+        tb_a[5] = 16'd27;
+        tb_a[6] = 16'd28;
+        tb_a[7] = 16'd29;
 
         num_errors = 0;
         tb_clk = 1;
@@ -70,8 +70,8 @@ module tb_memory_modelling;
         @(posedge tb_clk);
 
         repeat (100) begin
-            tb_b = $urandom() & 4'b1111;
-            repeat(8) begin
+            tb_b = $urandom() & 6'b111111;
+            repeat(9) begin
                 tb_rst = 0;
                 tb_en = 1;
                 @(posedge tb_clk);
